@@ -7,61 +7,50 @@
 //
 
 import UIKit
-import Speech
 import AVFoundation
+import Speech
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
 
+    // MARK: IBOutlets
+    
     @IBOutlet weak var transcription: UITextView!
 
+    // MARK: Properties
+    
     let recordingSession = AVAudioSession.sharedInstance()
     var audioRecorder: AVAudioRecorder!
+    
+    // MARK: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //FIXME: Ask only for permission when record button is used
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try recordingSession.setActive(true)
             recordingSession.requestRecordPermission() { [unowned self] (allowed: Bool) -> Void in
-                /*
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.speechRecognition()
-                    } else {
-                        // failed to record!
-                    }
-                }
-                */
             }
         } catch {
             // failed to record!
         }
-        
-    }
-
-    func speechRecognition() {
-        let recognizer = SFSpeechRecognizer()
-        
-        let audioPath = getDocumentsDirectory() + "/recording.m4a"
-        
-        //let audioFileURL = Bundle.main().urlForResource(audioPath, withExtension: "m4a")
-        let audioFileURL = URL(fileURLWithPath: audioPath)
-        
-        let request = SFSpeechURLRecognitionRequest(url: audioFileURL)
-        
-        recognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
-            // only print final result, not optional variations (best transcription)
-            guard let isFinalResult = result?.isFinal where isFinalResult == true else { return }
-            print (result?.bestTranscription.formattedString)
-        })
-         
     }
     
+    // MARK: IBActions
 
     @IBAction func startRecording(_ sender: AnyObject) {
-        let audioFilename = getDocumentsDirectory() + "/recording.m4a"
-        let audioURL = URL(fileURLWithPath: audioFilename)
+        handleStartRecording()
+    }
+    
+    @IBAction func stopRecording(_ sender: AnyObject) {
+        handleStopRecording()
+    }
+    
+    // MARK: Privat
+    private func handleStartRecording() {
+        var recordingFile = RecordingFile()
+        let audioURL = URL(fileURLWithPath: recordingFile.recordingFileName)
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -79,22 +68,29 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    @IBAction func stopRecording(_ sender: AnyObject) {
-        audioRecorder.stop()
-        audioRecorder = nil
-        speechRecognition()
+    private func handleStopRecording() {
+        stopRecorder()
+        var recordingFile = RecordingFile()
+
+        let speechRecognitionHelper = SFSpeechRecognitionHelper(url: URL(fileURLWithPath: recordingFile.recordingFileName))
+    
+        speechRecognitionHelper.recognitionResult { result in
+            guard let speechText = result else { return }
+            self.transcription.text = speechText
+        }
     }
     
-    func getDocumentsDirectory() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if !flag {
+    private func stopRecorder() {
+        
+        if audioRecorder != nil {
             audioRecorder.stop()
             audioRecorder = nil
+        }
+    }
+
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            stopRecorder()
         }
     }
 }

@@ -13,7 +13,11 @@
 		4C0752891D1FE36000D02447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0752881D1FE36000D02447 /* Assets.xcassets */; };
 		4C07528C1D1FE36000D02447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C07528A1D1FE36000D02447 /* LaunchScreen.storyboard */; };
 		4CEB4EDB1D1FF8D8002F9B7E /* helloworld.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */; };
-		4CEB4EDF1D200530002F9B7E /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB4EDE1D200530002F9B7E /* AudioRecorder.swift */; };
+		AA1865261D2088D900857D1E /* RecordingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1865251D2088D900857D1E /* RecordingFile.swift */; };
+		AA18652C1D20893600857D1E /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18652B1D20893600857D1E /* SpeechRecognition.swift */; };
+		AA18652E1D20895B00857D1E /* SFSpeechRecognitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */; };
+		AA707A6F1D206A7200F62C6B /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */; };
+		AA707A711D206B3E00F62C6B /* SpeechRecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +29,11 @@
 		4C07528B1D1FE36000D02447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C07528D1D1FE36000D02447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = helloworld.m4a; sourceTree = "<group>"; };
-		4CEB4EDE1D200530002F9B7E /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		AA1865251D2088D900857D1E /* RecordingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingFile.swift; sourceTree = "<group>"; };
+		AA18652B1D20893600857D1E /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
+		AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSpeechRecognitionHelper.swift; sourceTree = "<group>"; };
+		AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager+Ext.swift"; path = "../FileManager+Ext.swift"; sourceTree = "<group>"; };
+		AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognitionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,68 @@
 		4C0752801D1FE36000D02447 /* iOS10SpeechRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */,
 				4C0752811D1FE36000D02447 /* AppDelegate.swift */,
-				4C0752831D1FE36000D02447 /* ViewController.swift */,
-				4C0752851D1FE36000D02447 /* Main.storyboard */,
 				4C0752881D1FE36000D02447 /* Assets.xcassets */,
-				4C07528A1D1FE36000D02447 /* LaunchScreen.storyboard */,
+				AA1865291D20890400857D1E /* Controller */,
+				AA75F0941D208A3C0017B34D /* Extension */,
 				4C07528D1D1FE36000D02447 /* Info.plist */,
-				4CEB4EDE1D200530002F9B7E /* AudioRecorder.swift */,
+				AA1865271D2088EF00857D1E /* Model */,
+				AA18652F1D20899400857D1E /* Protocol */,
+				AA18652A1D20891500857D1E /* Ressource */,
+				AA1865281D2088FC00857D1E /* View */,
 			);
 			path = iOS10SpeechRecognition;
+			sourceTree = "<group>";
+		};
+		AA1865271D2088EF00857D1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA1865251D2088D900857D1E /* RecordingFile.swift */,
+				AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AA1865281D2088FC00857D1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C07528A1D1FE36000D02447 /* LaunchScreen.storyboard */,
+				4C0752851D1FE36000D02447 /* Main.storyboard */,
+				AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AA1865291D20890400857D1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C0752831D1FE36000D02447 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AA18652A1D20891500857D1E /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */,
+			);
+			name = Ressource;
+			sourceTree = "<group>";
+		};
+		AA18652F1D20899400857D1E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AA18652B1D20893600857D1E /* SpeechRecognition.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		AA75F0941D208A3C0017B34D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,8 +162,8 @@
 				TargetAttributes = {
 					4C07527D1D1FE36000D02447 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = FNBTP68MJQ;
-						DevelopmentTeamName = "Michael Borgmann (Personal Team)";
+						DevelopmentTeam = 59EHXW32NC;
+						DevelopmentTeamName = "creative workline GmbH";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA707A711D206B3E00F62C6B /* SpeechRecognitionView.xib in Resources */,
 				4C07528C1D1FE36000D02447 /* LaunchScreen.storyboard in Resources */,
 				4C0752891D1FE36000D02447 /* Assets.xcassets in Resources */,
 				4C0752871D1FE36000D02447 /* Main.storyboard in Resources */,
@@ -145,9 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEB4EDF1D200530002F9B7E /* AudioRecorder.swift in Sources */,
+				AA707A6F1D206A7200F62C6B /* FileManager+Ext.swift in Sources */,
 				4C0752841D1FE36000D02447 /* ViewController.swift in Sources */,
+				AA18652E1D20895B00857D1E /* SFSpeechRecognitionHelper.swift in Sources */,
 				4C0752821D1FE36000D02447 /* AppDelegate.swift in Sources */,
+				AA18652C1D20893600857D1E /* SpeechRecognition.swift in Sources */,
+				AA1865261D2088D900857D1E /* RecordingFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +330,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOS10SpeechRecognition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelborgmann.iOS10SpeechRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -278,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOS10SpeechRecognition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelborgmann.iOS10SpeechRecognition;
