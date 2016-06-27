@@ -1,6 +1,6 @@
 # SpeechRecognition
-iOS 10 Speech Recognition Demo App
 
+iOS 10 Speech Recognition Demo App Example for Swift 3
 
 ### ToDo
 
