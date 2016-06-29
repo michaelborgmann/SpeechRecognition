@@ -8,32 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		4C0752821D1FE36000D02447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0752811D1FE36000D02447 /* AppDelegate.swift */; };
-		4C0752841D1FE36000D02447 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0752831D1FE36000D02447 /* ViewController.swift */; };
 		4C0752871D1FE36000D02447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0752851D1FE36000D02447 /* Main.storyboard */; };
 		4C0752891D1FE36000D02447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0752881D1FE36000D02447 /* Assets.xcassets */; };
 		4C07528C1D1FE36000D02447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C07528A1D1FE36000D02447 /* LaunchScreen.storyboard */; };
-		4CEB4EDB1D1FF8D8002F9B7E /* helloworld.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */; };
-		AA1865261D2088D900857D1E /* RecordingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1865251D2088D900857D1E /* RecordingFile.swift */; };
-		AA18652C1D20893600857D1E /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18652B1D20893600857D1E /* SpeechRecognition.swift */; };
-		AA18652E1D20895B00857D1E /* SFSpeechRecognitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */; };
-		AA707A6F1D206A7200F62C6B /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */; };
-		AA707A711D206B3E00F62C6B /* SpeechRecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */; };
+		AA957CF41D240A690095C23B /* SpeechRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CF31D240A690095C23B /* SpeechRecognitionViewController.swift */; };
+		AA957CF61D240A7E0095C23B /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CF51D240A7E0095C23B /* FileManager+Ext.swift */; };
+		AA957CFA1D240A8C0095C23B /* AudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CF71D240A8C0095C23B /* AudioRecording.swift */; };
+		AA957CFB1D240A8C0095C23B /* RecordingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CF81D240A8C0095C23B /* RecordingFile.swift */; };
+		AA957CFC1D240A8C0095C23B /* SFSpeechRecognitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CF91D240A8C0095C23B /* SFSpeechRecognitionHelper.swift */; };
+		AA957CFF1D240A9E0095C23B /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CFD1D240A9E0095C23B /* Recording.swift */; };
+		AA957D001D240A9E0095C23B /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA957CFE1D240A9E0095C23B /* SpeechRecognition.swift */; };
+		AA957D021D240AAB0095C23B /* helloworld.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AA957D011D240AAB0095C23B /* helloworld.m4a */; };
+		AA957D041D240AB70095C23B /* SpeechRecognitionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA957D031D240AB70095C23B /* SpeechRecognitionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C07527E1D1FE36000D02447 /* iOS10SpeechRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS10SpeechRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0752811D1FE36000D02447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C0752831D1FE36000D02447 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C0752861D1FE36000D02447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C0752881D1FE36000D02447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C07528B1D1FE36000D02447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C07528D1D1FE36000D02447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = helloworld.m4a; sourceTree = "<group>"; };
-		AA1865251D2088D900857D1E /* RecordingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingFile.swift; sourceTree = "<group>"; };
-		AA18652B1D20893600857D1E /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
-		AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSpeechRecognitionHelper.swift; sourceTree = "<group>"; };
-		AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager+Ext.swift"; path = "../FileManager+Ext.swift"; sourceTree = "<group>"; };
-		AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeechRecognitionView.xib; sourceTree = "<group>"; };
+		AA957CF31D240A690095C23B /* SpeechRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechRecognitionViewController.swift; path = Controller/SpeechRecognitionViewController.swift; sourceTree = "<group>"; };
+		AA957CF51D240A7E0095C23B /* FileManager+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager+Ext.swift"; path = "Extension/FileManager+Ext.swift"; sourceTree = "<group>"; };
+		AA957CF71D240A8C0095C23B /* AudioRecording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecording.swift; path = Model/AudioRecording.swift; sourceTree = "<group>"; };
+		AA957CF81D240A8C0095C23B /* RecordingFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordingFile.swift; path = Model/RecordingFile.swift; sourceTree = "<group>"; };
+		AA957CF91D240A8C0095C23B /* SFSpeechRecognitionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFSpeechRecognitionHelper.swift; path = Model/SFSpeechRecognitionHelper.swift; sourceTree = "<group>"; };
+		AA957CFD1D240A9E0095C23B /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recording.swift; path = Protocol/Recording.swift; sourceTree = "<group>"; };
+		AA957CFE1D240A9E0095C23B /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechRecognition.swift; path = Protocol/SpeechRecognition.swift; sourceTree = "<group>"; };
+		AA957D011D240AAB0095C23B /* helloworld.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = helloworld.m4a; path = Ressource/helloworld.m4a; sourceTree = "<group>"; };
+		AA957D031D240AB70095C23B /* SpeechRecognitionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpeechRecognitionView.xib; path = View/SpeechRecognitionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,9 @@
 			children = (
 				4C0752811D1FE36000D02447 /* AppDelegate.swift */,
 				4C0752881D1FE36000D02447 /* Assets.xcassets */,
+				4C07528D1D1FE36000D02447 /* Info.plist */,
 				AA1865291D20890400857D1E /* Controller */,
 				AA75F0941D208A3C0017B34D /* Extension */,
-				4C07528D1D1FE36000D02447 /* Info.plist */,
 				AA1865271D2088EF00857D1E /* Model */,
 				AA18652F1D20899400857D1E /* Protocol */,
 				AA18652A1D20891500857D1E /* Ressource */,
@@ -82,8 +86,9 @@
 		AA1865271D2088EF00857D1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA1865251D2088D900857D1E /* RecordingFile.swift */,
-				AA18652D1D20895B00857D1E /* SFSpeechRecognitionHelper.swift */,
+				AA957CF71D240A8C0095C23B /* AudioRecording.swift */,
+				AA957CF81D240A8C0095C23B /* RecordingFile.swift */,
+				AA957CF91D240A8C0095C23B /* SFSpeechRecognitionHelper.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -93,7 +98,7 @@
 			children = (
 				4C07528A1D1FE36000D02447 /* LaunchScreen.storyboard */,
 				4C0752851D1FE36000D02447 /* Main.storyboard */,
-				AA707A701D206B3E00F62C6B /* SpeechRecognitionView.xib */,
+				AA957D031D240AB70095C23B /* SpeechRecognitionView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -101,7 +106,7 @@
 		AA1865291D20890400857D1E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4C0752831D1FE36000D02447 /* ViewController.swift */,
+				AA957CF31D240A690095C23B /* SpeechRecognitionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -109,7 +114,7 @@
 		AA18652A1D20891500857D1E /* Ressource */ = {
 			isa = PBXGroup;
 			children = (
-				4CEB4EDA1D1FF8D8002F9B7E /* helloworld.m4a */,
+				AA957D011D240AAB0095C23B /* helloworld.m4a */,
 			);
 			name = Ressource;
 			sourceTree = "<group>";
@@ -117,7 +122,8 @@
 		AA18652F1D20899400857D1E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				AA18652B1D20893600857D1E /* SpeechRecognition.swift */,
+				AA957CFD1D240A9E0095C23B /* Recording.swift */,
+				AA957CFE1D240A9E0095C23B /* SpeechRecognition.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -125,7 +131,7 @@
 		AA75F0941D208A3C0017B34D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AA707A6E1D206A7200F62C6B /* FileManager+Ext.swift */,
+				AA957CF51D240A7E0095C23B /* FileManager+Ext.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -191,11 +197,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA707A711D206B3E00F62C6B /* SpeechRecognitionView.xib in Resources */,
 				4C07528C1D1FE36000D02447 /* LaunchScreen.storyboard in Resources */,
+				AA957D041D240AB70095C23B /* SpeechRecognitionView.xib in Resources */,
 				4C0752891D1FE36000D02447 /* Assets.xcassets in Resources */,
 				4C0752871D1FE36000D02447 /* Main.storyboard in Resources */,
-				4CEB4EDB1D1FF8D8002F9B7E /* helloworld.m4a in Resources */,
+				AA957D021D240AAB0095C23B /* helloworld.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA707A6F1D206A7200F62C6B /* FileManager+Ext.swift in Sources */,
-				4C0752841D1FE36000D02447 /* ViewController.swift in Sources */,
-				AA18652E1D20895B00857D1E /* SFSpeechRecognitionHelper.swift in Sources */,
+				AA957CFC1D240A8C0095C23B /* SFSpeechRecognitionHelper.swift in Sources */,
 				4C0752821D1FE36000D02447 /* AppDelegate.swift in Sources */,
-				AA18652C1D20893600857D1E /* SpeechRecognition.swift in Sources */,
-				AA1865261D2088D900857D1E /* RecordingFile.swift in Sources */,
+				AA957CF61D240A7E0095C23B /* FileManager+Ext.swift in Sources */,
+				AA957D001D240A9E0095C23B /* SpeechRecognition.swift in Sources */,
+				AA957CFA1D240A8C0095C23B /* AudioRecording.swift in Sources */,
+				AA957CFF1D240A9E0095C23B /* Recording.swift in Sources */,
+				AA957CF41D240A690095C23B /* SpeechRecognitionViewController.swift in Sources */,
+				AA957CFB1D240A8C0095C23B /* RecordingFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

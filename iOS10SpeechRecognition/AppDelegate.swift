@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main().bounds)
         
-        let speechVC = ViewController(nibName: "SpeechRecognitionView", bundle: nil)
+        // load speec recognition view controller
+        let speechVC = SpeechRecognitionViewController(nibName: "SpeechRecognitionView", bundle: nil)
+        speechVC.audioRecording = AudioRecording(recordingFile: RecordingFile())
         
         window?.rootViewController = speechVC
         window?.makeKeyAndVisible()

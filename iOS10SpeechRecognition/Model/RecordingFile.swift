@@ -11,12 +11,13 @@ import Foundation
 struct RecordingFile {
     let fileName: String = "recording"
     let fileExtension: String = "m4a"
+    let pathDir: String = FileManager.cachesDir()
     
-    lazy var recordingFileName: String = {
-        return FileManager.documentsDir()
+    func pathUrl() -> URL {
+        return URL(fileURLWithPath: pathDir
             .appending("/")
             .appending(self.fileName)
             .appending(".")
-            .appending(self.fileExtension)
-    }()
+            .appending(self.fileExtension))
+    }
 }
